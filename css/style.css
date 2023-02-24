@@ -1,0 +1,142 @@
+/* Преднастройки для всего документа */
+/* ------------------------------------------------------------------------------ */
+
+* {
+    box-sizing: border-box;
+    /* Чтобы отступы и границы считались изнутри элементов (https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing) */
+    /* Это позволит добавлять отступы не перерассчитывая размер элемента (отступы добавятся прямо внутри него) */
+}
+
+a {
+    text-decoration: none;
+    /* Убрали оформление у всех ссылок */
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* Убрали отступы и значки у элементов ненумерованных списков */
+}
+
+img {
+    max-width: 100%;
+    /* Чтобы картинки при растягивании на бекгранд не вырастали больше своего размера */
+}
+
+html {
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    /* padding нужны, чтобы при уменьшении ширины экрана контейнер не прилипал к краю, а немного отходил */
+    /* Мы также увеличили размер max-width на 30 px, так как ширина элемента "съелась" этими паддингами */
+}
+
+.btn {
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 1;
+    /* расстояние между строками при переносе текста (мы установили "по умолчанию" */
+    background-color: #3172b9;
+    padding: 15px 16px;
+    /* Настройили цвет и размеры кнопки */
+    border-radius: 4px;
+    /* Задали скругление краёв кнопки */
+    cursor: pointer;
+    /* Чтобы при наведении на кнопку курсор преватился в палец */
+    display: inline-block;
+    /* С отображением по умолчанию (inline) Отступ рассчитывается не от краёв кнопки - а от текста в ней и более нижний элемент может залезть в кнопку */
+}
+
+.text-center {
+    /* Вспомогательный клас, который будем применять, если нужно отцентровать текст по горизонтали */
+    text-align: center;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* Header */
+
+.header {
+    height: 110px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    /* Если контейне не заставить занимать 100% высты родителя - он будет не 110px высотой, а по содержимому */
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.header-btn {
+    margin-left: 80px;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* Блок - замануха (section-hero) */
+
+.hero-container {
+    padding-top: 120px;
+    padding-bottom: 130px;
+    background-image:url(../img/hands.png);
+    background-position: right;
+}
+
+.hero_width_limiter {
+    max-width: 500px;
+}
+
+.section-hero-heading {
+    margin-bottom: 20px;
+}
+
+.section-hero-description {
+    margin-bottom: 30px;
+}
+
+.section-hero-btn-description {
+    margin-top: 10px;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* Блок what we do */
+
+.section-do {
+    padding-top: 140px;
+    padding-bottom: 100px;
+}
+
+.section-description {
+    margin-top: 25px;
+}
+
+.section-do-list {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-do-item {
+    padding: 20px;
+    border-color: #e4e4e4;
+    border-width: 1px;
+    border-radius: 5px;
+}
